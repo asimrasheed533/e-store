@@ -1,3 +1,10 @@
+@use "header";
+@use "home";
+@use "myCart";
+@use "order";
+@use "signin";
+@use "Review";
+
 :root {
   --white: #ffffff;
   --whiteShadow: #fcfcfc;
