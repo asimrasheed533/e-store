@@ -17,6 +17,7 @@
     "react-click-away-listener": "^2.2.4",
     "react-dom": "^18.3.1",
     "react-router": "^7.0.1",
+    "react-ui-scrollspy": "^2.3.0",
     "sass": "^1.81.0",
     "scss": "^0.2.4",
     "swiper": "^11.1.15"

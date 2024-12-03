@@ -1,4 +1,5 @@
 import banner1 from "../../assets/banner_1.jpg";
+import sideBanner from "../../assets/s_banner.png";
 import banner from "../../assets/burger.webp";
 import banner_2 from "../../assets/banner_2.jpg";
 import fast01 from "../../assets/fast01.png";
@@ -46,7 +47,7 @@ export default function Home() {
             className="page__title__col__img"
             width={1000}
             height={70}
-            src={banner}
+            src={sideBanner}
             alt="food"
           />
         </div>
@@ -61,7 +62,7 @@ export default function Home() {
             width={1000}
             height={170}
             className="page__title__col__img"
-            src={banner}
+            src={sideBanner}
             alt="food"
           />
         </div>
