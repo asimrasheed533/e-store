@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
+import Header from "./components/Header";
 // import.meta.glob("/style/**/*.scss", { eager: true });
 import stylesheet from "../style/global.scss?url";
 export const links: Route.LinksFunction = () => [
@@ -35,6 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <Header />
         {children}
         <ScrollRestoration />
         <Scripts />

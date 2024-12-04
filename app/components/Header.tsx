@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
-import "@/style/header.scss";
-import { useRouter } from "next/navigation";
 import { NavLink } from "react-router";
-
+import logo from "../../assets/menuLogo.png";
 export default function Header() {
-  const router = useRouter();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   function checkNavOpen() {
@@ -33,12 +30,7 @@ export default function Header() {
         <div className="nav__bar__container">
           {isOpenMenu ? (
             <div className="nav__entry">
-              <NavLink
-                to="/"
-                className={`nav__entry__item ${
-                  pathname === "/" ? "active" : ""
-                }`}
-              >
+              <NavLink to="/" className="nav__entry__item">
                 Home
               </NavLink>
 
@@ -100,12 +92,12 @@ export default function Header() {
               width={100}
               height={100}
               className="nav__log__image"
-              src="#"
+              src={logo}
               alt="logo"
             />
           </button>
-          {/* <div className="nav__register">
-            {token ? (
+          <div className="nav__register">
+            {/* {token ? (
               <>
                 <button
                   onClick={() => router.push("/signIn")}
@@ -143,9 +135,9 @@ export default function Header() {
                   Login
                 </button>
               </>
-            )}
-          </div> */}
-          <button className="nav__register__button">Login</button>
+            )} */}
+            <button className="nav__register__button">Login</button>
+          </div>
         </div>
       </ClickAwayListener>
     </>

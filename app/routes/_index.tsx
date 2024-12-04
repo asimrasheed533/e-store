@@ -110,7 +110,7 @@ export default function Home() {
                 <img
                   width={100}
                   height={100}
-                  className="product__main__card__img__img"
+                  className="product__main__card__img__image"
                   src={product.imgSrc}
                   alt={product.title}
                 />
