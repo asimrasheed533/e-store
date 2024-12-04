@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import logo from "../../assets/menuLogo.png";
 export default function Header() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -87,7 +87,7 @@ export default function Header() {
               <line y1="6.5" x2="14" y2="6.5" stroke="#C4C4C4" />
             </svg>
           </button>
-          <button className="nav__log">
+          <Link to="/" className="nav__log">
             <img
               width={100}
               height={100}
@@ -95,7 +95,7 @@ export default function Header() {
               src={logo}
               alt="logo"
             />
-          </button>
+          </Link>
           <div className="nav__register">
             {/* {token ? (
               <>
