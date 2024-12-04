@@ -7,38 +7,39 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-export default function Home() {
-  const products = [
-    {
-      id: 1,
-      title: "Family Platter",
-      subtitle: "1 whole Chicken, 5 Wings",
-      price: 30.2,
-      imgSrc: banner,
-    },
-    {
-      id: 2,
-      title: "Veggie Delight",
-      subtitle: "2 Veggie Wraps, Fries",
-      price: 35.5,
-      imgSrc: banner_2,
-    },
-    {
-      id: 3,
-      title: "Veggie Delight",
-      subtitle: "2 Veggie Wraps, Fries",
-      price: 35.5,
-      imgSrc: banner_2,
-    },
-    {
-      id: 4,
-      title: "Veggie Delight",
-      subtitle: "2 Veggie Wraps, Fries",
-      price: 35.5,
-      imgSrc: banner,
-    },
-  ];
 
+const products = [
+  {
+    id: 1,
+    title: "Family Platter",
+    subtitle: "1 whole Chicken, 5 Wings",
+    price: 30.2,
+    imgSrc: banner,
+  },
+  {
+    id: 2,
+    title: "Veggie Delight",
+    subtitle: "2 Veggie Wraps, Fries",
+    price: 35.5,
+    imgSrc: banner_2,
+  },
+  {
+    id: 3,
+    title: "Veggie Delight",
+    subtitle: "2 Veggie Wraps, Fries",
+    price: 35.5,
+    imgSrc: banner_2,
+  },
+  {
+    id: 4,
+    title: "Veggie Delight",
+    subtitle: "2 Veggie Wraps, Fries",
+    price: 35.5,
+    imgSrc: banner,
+  },
+];
+
+export default function Home() {
   return (
     <>
       <div className="page__title__row">
