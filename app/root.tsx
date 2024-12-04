@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 import Header from "./components/Header";
-// import.meta.glob("/style/**/*.scss", { eager: true });
+import.meta.glob("/style/**/*.scss", { eager: true });
 import stylesheet from "../style/global.scss?url";
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
