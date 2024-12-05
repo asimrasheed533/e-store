@@ -1,14 +1,13 @@
-import { Router } from "react-router";
+"use Client";
+
+import useSidebar from "hooks/useSidebar";
 
 export default function CustomerDashboardHeader() {
+  const [isCollapsed, setIsCollapsed] = useSidebar();
   return (
     <div className="dashboard__main__header">
       <div className="dashboard__main__header__title">
-        <button
-          type="button"
-          // onClick={() => Router.back()}
-          className="dashboard__main__header__title__back"
-        >
+        <button type="button" className="dashboard__main__header__title__back">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -25,7 +24,7 @@ export default function CustomerDashboardHeader() {
           </svg>
         </button>
         icon
-        <div className="dashboard__main__header__title__text">Label</div>
+        <div className="dashboard__main__header__title__text">Dashboard</div>
       </div>
     </div>
   );
