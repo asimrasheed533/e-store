@@ -29,7 +29,7 @@
   width: 100%;
   max-width: 300px;
   gap: 1.5em;
-  background-color: rgba(236, 236, 236, 0.87);
+  background-color: var(--whiteShadow);
   z-index: 100;
 }
 .dashboard__sidebar__content {
@@ -73,6 +73,29 @@
   background-color: var(--grey);
   cursor: pointer;
 }
+.dashboard__sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5em;
+}
+.dashboard__sidebar__header__menu {
+  display: none;
+}
+.dashboard__sidebar__header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+.dashboard__sidebar__header__logo__img {
+  // width: 125px;
+  height: 125px;
+  object-fit: contain;
+}
+
 @media (max-width: 768px) {
   .dashboard__sidebar__wrapper {
     position: fixed;
