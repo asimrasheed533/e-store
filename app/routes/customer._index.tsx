@@ -1,7 +1,6 @@
-import React from "react";
-import { Link } from "react-router";
+import ListingTable from "~/components/ListingTable";
 import ListingTabs from "~/components/ListingTabs";
-
+import headerItems from "../../data/headerItems.json";
 export default function CustomerMain() {
   return (
     <div className="listing__page">
@@ -13,7 +12,7 @@ export default function CustomerMain() {
         />
         <div className="listing__page__header__actions">
           {/* <SearchInput value={search} onChange={setSearch} /> */}
-
+          {/* 
           <Link to="/" className="listing__page__header__actions__button">
             <svg
               width="16"
@@ -28,9 +27,12 @@ export default function CustomerMain() {
               />
             </svg>
             Create Customer
-          </Link>
+          </Link> */}
         </div>
       </div>
+      <ListingTable data={[]} headerItems={headerItems.products}>
+        <div className="listing__page__table__content__row__entry">NAME</div>
+      </ListingTable>
     </div>
   );
 }
