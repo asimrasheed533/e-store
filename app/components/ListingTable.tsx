@@ -1,4 +1,3 @@
-// import { IListingTable } from "@/interfaces";
 import { IListingTable } from "interfaces";
 import ListingActionBar from "./ListingActionBar";
 import ListingHeaderEntry from "./ListingHeaderEntry";
