@@ -1,0 +1,108 @@
+.listing__page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1em;
+}
+.listing__page__table {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--whiteShadow);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  height: calc(100% - 140px - 32px - 1.3em);
+  position: relative;
+}
+.listing__page__header__tabs {
+  display: flex;
+  gap: 0.7em;
+  padding: 1em 0;
+}
+.listing__page__table__scrollable {
+  overflow-x: auto;
+  height: calc(100% - 50px);
+  border-radius: 10px;
+}
+.listing__page__table__actions {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: calc(100% - 50px - 5px);
+  height: 56.6px;
+  background-color: var(--whiteShadow);
+  border-bottom: 1px solid var(--lightGrey);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5em;
+  padding: 0 1em;
+  z-index: 101;
+}
+.listing__page__table__actions__button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.7em 1.8em;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--white);
+  cursor: pointer;
+}
+.listing__page__table__actions__button svg {
+  width: 16px;
+  height: 16px;
+}
+.listing__page__table__actions__button:hover {
+  background-color: var(--lightGrey);
+}
+.listing__page__table__actions__button.danger {
+  background-color: #ff000044;
+  color: #ff3333;
+  transition: all 0.3s;
+}
+.listing__page__table__actions__button.danger:hover {
+  background-color: #ff33337f;
+  color: white;
+}
+.listing__page__table__header {
+  display: flex;
+  gap: 1em;
+  padding: 0.8em 0.5em;
+  position: sticky;
+  top: 0;
+  background-color: var(--whiteShadow);
+  width: calc(100% - 5px);
+  min-width: fit-content;
+  border-bottom: 1px solid var(--lightGrey);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.listing__page__table__header__entry {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--blue);
+  width: 150px;
+  min-width: 150px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  padding: 0 0.5em;
+}
+.listing__page__table__header__entry.has__image {
+  width: 200px;
+}
+.listing__page__table__header__entry__sort svg {
+  width: 15px;
+  height: 15px;
+}
+.listing__page__table__header__entry__sort:hover {
+  background-color: var(--lightGrey);
+}
+.listing__page__table__header__entry.checkbox {
+  width: 50px;
+  min-width: 50px;
+  justify-content: center;
+}
