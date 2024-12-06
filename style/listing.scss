@@ -4,6 +4,17 @@
   height: 100%;
   gap: 1em;
 }
+.dashboard__main__content {
+  padding: 0 1em;
+  overflow-y: auto;
+  height: calc(100% - 75.59px);
+}
+.dashboard__main__content__inner {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
 .listing__page__table {
   display: flex;
   flex-direction: column;
@@ -14,10 +25,47 @@
   height: calc(100% - 140px - 32px - 1.3em);
   position: relative;
 }
+.listing__page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7em;
+}
 .listing__page__header__tabs {
   display: flex;
   gap: 0.7em;
   padding: 1em 0;
+}
+.listing__page__header__tabs__tab {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1.5em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: none;
+  background-color: var(--whiteShadow);
+  cursor: pointer;
+  gap: 0.7em;
+  white-space: nowrap;
+}
+.listing__page__header__actions__button {
+  background-color: var(--golden);
+  color: var(--white);
+  padding: 0.5em 1.5em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.listing__page__header__actions__button:hover {
+  background-color: var(--lightGrey);
 }
 .listing__page__table__scrollable {
   overflow-x: auto;
@@ -71,17 +119,16 @@
   padding: 0.8em 0.5em;
   position: sticky;
   top: 0;
-  background-color: var(--whiteShadow);
+  background-color: var(--blueLight);
   width: calc(100% - 5px);
   min-width: fit-content;
-  border-bottom: 1px solid var(--lightGrey);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 30px;
+  color: var(--white);
 }
 .listing__page__table__header__entry {
   font-size: 0.85em;
   font-weight: 600;
-  color: var(--blue);
+  color: var(--white);
   width: 150px;
   min-width: 150px;
   white-space: nowrap;
