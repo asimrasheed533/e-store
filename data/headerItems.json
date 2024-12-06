@@ -1,0 +1,10 @@
+{
+  "products": [
+    { "key": "number", "name": "Number" },
+    { "key": "name", "name": "Name" },
+    { "key": "price", "name": "Price" },
+    { "key": "quantity", "name": "Quantity" },
+    { "key": "total", "name": "Total" },
+    { "key": "action", "name": "Action" }
+  ]
+}
