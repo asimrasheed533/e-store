@@ -55,7 +55,6 @@ export default function CustomerDashboardHeader() {
             <polyline points="15 18 9 12 15 6" />
           </svg>
         </button>
-        icon
         <div className="dashboard__main__header__title__text">Dashboard</div>
       </div>
     </div>

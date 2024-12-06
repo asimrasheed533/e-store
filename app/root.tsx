@@ -6,9 +6,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-import Header from "./components/Header";
-import.meta.glob("/style/**/*.scss", { eager: true });
-import stylesheet from "../style/global.scss?url";
+
+const styles = import.meta.glob("/style/**/*.scss", {
+  eager: true,
+  query: "url",
+});
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -20,7 +23,10 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
-  { rel: "stylesheet", href: stylesheet },
+  ...Object.keys(styles).map((style) => ({
+    rel: "stylesheet",
+    href: style,
+  })),
 ];
 
 import type { Route } from "./+types/root";

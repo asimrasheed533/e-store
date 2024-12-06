@@ -19,9 +19,8 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background-color: var(--whiteShadow);
   border-radius: 10px;
-  box-shadow: var(--shadow);
+  // box-shadow: var(--shadow);
   height: calc(100% - 140px - 32px - 1.3em);
   position: relative;
 }
@@ -71,6 +70,7 @@
   overflow-x: auto;
   height: calc(100% - 50px);
   border-radius: 10px;
+  background-color: var(--blueLight);
 }
 .listing__page__table__actions {
   position: absolute;
@@ -152,4 +152,13 @@
   width: 50px;
   min-width: 50px;
   justify-content: center;
+}
+.listing__page__table__content__empty {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  color: var(--white);
 }

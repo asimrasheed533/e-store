@@ -3,6 +3,7 @@ import ListingActionBar from "./ListingActionBar";
 import ListingHeaderEntry from "./ListingHeaderEntry";
 import Loader from "./Loader";
 import ListingCheckbox from "./ListingCheckbox";
+import NoData from "icons/NoData";
 
 export default function ListingTable({
   style,
@@ -22,6 +23,37 @@ export default function ListingTable({
 }: IListingTable) {
   return (
     <div className="listing__page__table" style={style}>
+      <div className="listing__page__table__header">
+        {selectedRows && !noCheckbox && (
+          <ListingHeaderEntry className="checkbox">
+            <ListingCheckbox
+              checked={selectedRows.length === data?.length && data?.length > 0}
+              partiallyChecked={
+                selectedRows.length > 0 && selectedRows.length < data.length
+              }
+              onClick={() => {
+                if (selectedRows.length === data?.length) {
+                  setSelectedRows([]);
+                } else {
+                  setSelectedRows(data?.map((item) => item.id));
+                }
+              }}
+            />
+          </ListingHeaderEntry>
+        )}
+        {headerItems?.map((item) => (
+          <ListingHeaderEntry
+            key={item.key}
+            sortKey={item.key}
+            sortData={sortData}
+            onSort={(value) => setSortData(value)}
+            hasImage={item.hasImage}
+            style={item.style}
+          >
+            {item.name}
+          </ListingHeaderEntry>
+        ))}
+      </div>
       <div className="listing__page__table__scrollable">
         {selectedRows && (actions?.length ?? 0) > 0 && (
           <ListingActionBar selectedItems={selectedRows?.length}>
@@ -43,39 +75,7 @@ export default function ListingTable({
             ))}
           </ListingActionBar>
         )}
-        <div className="listing__page__table__header">
-          {selectedRows && !noCheckbox && (
-            <ListingHeaderEntry className="checkbox">
-              <ListingCheckbox
-                checked={
-                  selectedRows.length === data?.length && data?.length > 0
-                }
-                partiallyChecked={
-                  selectedRows.length > 0 && selectedRows.length < data.length
-                }
-                onClick={() => {
-                  if (selectedRows.length === data?.length) {
-                    setSelectedRows([]);
-                  } else {
-                    setSelectedRows(data?.map((item) => item.id));
-                  }
-                }}
-              />
-            </ListingHeaderEntry>
-          )}
-          {headerItems?.map((item) => (
-            <ListingHeaderEntry
-              key={item.key}
-              sortKey={item.key}
-              sortData={sortData}
-              onSort={(value) => setSortData(value)}
-              hasImage={item.hasImage}
-              style={item.style}
-            >
-              {item.name}
-            </ListingHeaderEntry>
-          ))}
-        </div>
+
         <div
           className={
             "listing__page__table__content" + (isStale ? " stale" : "")
@@ -87,7 +87,7 @@ export default function ListingTable({
             </div>
           ) : data?.length === 0 ? (
             <div className="listing__page__table__content__empty">
-              No data available
+              <NoData />
             </div>
           ) : (
             children

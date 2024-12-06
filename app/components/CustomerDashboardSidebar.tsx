@@ -1,7 +1,7 @@
 "use client";
 import useSidebar from "hooks/useSidebar";
 import { motion } from "framer-motion";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 export default function CustomerDashboardSidebar() {
   const [isCollapsed, setIsCollapsed] = useSidebar();
@@ -69,9 +69,15 @@ export default function CustomerDashboardSidebar() {
           </button>
         </div>
         <div className="dashboard__sidebar__content">
-          <div className="dashboard__sidebar__content__item">Dashboard</div>
-          <div className="dashboard__sidebar__content__item">Order History</div>
-          <div className="dashboard__sidebar__content__item">Profile</div>
+          <NavLink to="/" className="dashboard__sidebar__content__item">
+            Dashboard
+          </NavLink>
+          <NavLink to="/orders" className="dashboard__sidebar__content__item">
+            Order History
+          </NavLink>
+          <NavLink to="/profile" className="dashboard__sidebar__content__item">
+            Profile
+          </NavLink>
         </div>
       </motion.div>
     </motion.div>
