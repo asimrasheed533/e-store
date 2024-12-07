@@ -147,9 +147,9 @@
 .sidebar__nav__warper__btn:hover {
   background: linear-gradient(90deg, #f2a734 0.33%, #74511b 127.63%);
 }
-// .active {
-//   background: linear-gradient(90deg, #f2a734 0.33%, #74511b 127.63%);
-// }
+.sidebar__nav__entry.active {
+  background: linear-gradient(90deg, #f2a734 0.33%, #74511b 127.63%);
+}
 .sidebar__nav__entry {
   width: 100%;
   display: flex;
