@@ -2,6 +2,7 @@ import useSidebar from "hooks/useSidebar";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router";
 import { SideBarLink } from "constants/CustomerDashboard";
+import { useState } from "react";
 
 export default function CustomerDashboardSidebar() {
   const [isCollapsed, setIsCollapsed] = useSidebar();
@@ -75,22 +76,35 @@ export default function CustomerDashboardSidebar() {
 }
 
 function SideBarEntry({ sidebarEntry: SideBarLink }: { sidebarEntry: any }) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="sidebar__nav__warper">
-      {SideBarLink.children.map((entry: any) => (
-        <NavLink
-          key={entry.path}
-          className={({ isActive }) =>
-            `sidebar__nav__entry ${isActive ? "active" : ""}`
-          }
-          to={entry.path}
+    <>
+      <div className="sidebar__category">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={`sidebar__category__btn ${isOpen ? "active" : ""}`}
         >
-          {entry.icon && (
-            <span className="sidebar__nav__icon">{entry.icon}</span>
-          )}
-          <span className="sidebar__nav__text">{entry.name}</span>
-        </NavLink>
-      ))}
-    </div>
+          <span>{SideBarLink.name}</span>
+        </button>
+      </div>
+      {isOpen && (
+        <div className="sidebar__nav__warper">
+          {SideBarLink.children.map((entry: any) => (
+            <NavLink
+              key={entry.path}
+              className={({ isActive }) =>
+                `sidebar__nav__entry ${isActive ? "active" : ""}`
+              }
+              to={entry.path}
+            >
+              {entry.icon && (
+                <span className="sidebar__nav__icon">{entry.icon}</span>
+              )}
+              <span className="sidebar__nav__text">{entry.name}</span>
+            </NavLink>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
