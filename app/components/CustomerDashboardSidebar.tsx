@@ -80,7 +80,9 @@ function SideBarEntry({ sidebarEntry: SideBarLink }: { sidebarEntry: any }) {
       {SideBarLink.children.map((entry: any) => (
         <NavLink
           key={entry.path}
-          className="sidebar__nav__entry"
+          className={({ isActive }) =>
+            `sidebar__nav__entry ${isActive ? "active" : ""}`
+          }
           to={entry.path}
         >
           {entry.icon && (
