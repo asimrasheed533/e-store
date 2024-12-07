@@ -43,7 +43,10 @@ export default function CustomerMain() {
               {item.name}
             </div>
             <div className="listing__page__table__content__row__entry">
-              {item.category}
+              {item.price}
+            </div>
+            <div className="listing__page__table__content__row__entry">
+              {item.stock}
             </div>
             <div className="listing__page__table__content__row__entry">
               {item.price}

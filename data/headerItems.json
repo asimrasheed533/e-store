@@ -4,7 +4,6 @@
     { "key": "name", "name": "Name" },
     { "key": "price", "name": "Price" },
     { "key": "quantity", "name": "Quantity" },
-    { "key": "total", "name": "Total" },
-    { "key": "action", "name": "Action" }
+    { "key": "total", "name": "Total" }
   ]
 }

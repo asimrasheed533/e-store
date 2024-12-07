@@ -1,7 +1,7 @@
-"use client";
 import useSidebar from "hooks/useSidebar";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router";
+import { SideBarLink } from "constants/CustomerDashboard";
 
 export default function CustomerDashboardSidebar() {
   const [isCollapsed, setIsCollapsed] = useSidebar();
@@ -22,24 +22,20 @@ export default function CustomerDashboardSidebar() {
       <motion.div
         initial={{
           opacity: 0,
-          x: -300, // Start off-screen to the left
+          x: -300,
         }}
         animate={{
           opacity: 1,
-          x: 0, // Slide to the center (visible position)
+          x: 0,
         }}
         transition={{
           duration: 0.3,
-          ease: "easeInOut", // Smooth animation
+          ease: "easeInOut",
         }}
         className="dashboard__sidebar"
       >
         <div className="dashboard__sidebar__header">
-          <Link
-            // href={userInfo.type === "admin" ? "/admin" : "/customer"}
-            to="/customer"
-            className="dashboard__sidebar__header__logo"
-          >
+          <Link to="/customer" className="dashboard__sidebar__header__logo">
             <img
               className="dashboard__sidebar__header__logo__img"
               loading="lazy"
@@ -68,18 +64,31 @@ export default function CustomerDashboardSidebar() {
             </svg>
           </button>
         </div>
-        <div className="dashboard__sidebar__content">
-          <NavLink to="/" className="dashboard__sidebar__content__item">
-            Dashboard
-          </NavLink>
-          <NavLink to="/orders" className="dashboard__sidebar__content__item">
-            Order History
-          </NavLink>
-          <NavLink to="/profile" className="dashboard__sidebar__content__item">
-            Profile
-          </NavLink>
+        <div className="container__sidebar__content">
+          {SideBarLink.map((index) => (
+            <SideBarEntry sidebarEntry={index} />
+          ))}
         </div>
       </motion.div>
     </motion.div>
+  );
+}
+
+function SideBarEntry({ sidebarEntry: SideBarLink }: { sidebarEntry: any }) {
+  return (
+    <div className="sidebar__nav__warper">
+      {SideBarLink.children.map((entry: any) => (
+        <NavLink
+          key={entry.path}
+          className="sidebar__nav__entry"
+          to={entry.path}
+        >
+          {entry.icon && (
+            <span className="sidebar__nav__icon">{entry.icon}</span>
+          )}
+          <span className="sidebar__nav__text">{entry.name}</span>
+        </NavLink>
+      ))}
+    </div>
   );
 }
