@@ -75,8 +75,8 @@ export default function ListingTable({
             ))}
           </ListingActionBar>
         )}
-
-        <div
+        <div className="listing__page__table__content">{children}</div>
+        {/* <div
           className={
             "listing__page__table__content" + (isStale ? " stale" : "")
           }
@@ -92,7 +92,7 @@ export default function ListingTable({
           ) : (
             children
           )}
-        </div>
+        </div> */}
       </div>
       {/* {totalPages && (
         <div className="listing__page__table__footer">

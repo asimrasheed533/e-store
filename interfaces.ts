@@ -24,7 +24,6 @@ export interface IListingTable {
   headerItems: {
     key: string;
     name: string;
-    nameAr: string;
     hasImage?: boolean;
     style?: CSSProperties;
   }[];

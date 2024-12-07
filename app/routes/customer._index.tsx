@@ -1,6 +1,8 @@
 import ListingTable from "~/components/ListingTable";
 import ListingTabs from "~/components/ListingTabs";
 import headerItems from "../../data/headerItems.json";
+import { productsList as data } from "../../hooks/mocks";
+import ListingCheckbox from "~/components/ListingCheckbox";
 export default function CustomerMain() {
   return (
     <div className="listing__page">
@@ -31,7 +33,23 @@ export default function CustomerMain() {
         </div>
       </div>
       <ListingTable data={[]} headerItems={headerItems.products}>
-        <div className="listing__page__table__content__row__entry">NAME</div>
+        {data.map((item) => (
+          <div key={item.id} className="listing__page__table__content__row">
+            <div className="listing__page__table__content__row__entry checkbox">
+              <ListingCheckbox checked={false} onClick={() => {}} />
+            </div>
+
+            <div className="listing__page__table__content__row__entry">
+              {item.name}
+            </div>
+            <div className="listing__page__table__content__row__entry">
+              {item.category}
+            </div>
+            <div className="listing__page__table__content__row__entry">
+              {item.price}
+            </div>
+          </div>
+        ))}
       </ListingTable>
     </div>
   );
