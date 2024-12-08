@@ -1,7 +1,9 @@
+import GeneralIcon from "icons/GeneralIcon";
 export const SideBarLink = [
   {
-    name: "dashboard",
+    name: "Dashboard",
     path: "",
+    icon: <GeneralIcon />,
     children: [
       {
         name: "Customers",
@@ -17,5 +19,9 @@ export const SideBarLink = [
         path: "/product2",
       },
     ],
+  },
+  {
+    name: "Orders",
+    path: "",
   },
 ];

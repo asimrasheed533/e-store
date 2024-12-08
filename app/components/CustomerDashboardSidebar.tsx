@@ -79,12 +79,13 @@ function SideBarEntry({ sidebarEntry: SideBarLink }: { sidebarEntry: any }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="sidebar__category">
+      <div className="sidebar__nav__warper__header">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`sidebar__category__btn ${isOpen ? "active" : ""}`}
         >
-          <span>{SideBarLink.name}</span>
+          <div className="sidebar__category__btn__icon">{SideBarLink.icon}</div>
+          <div className="sidebar__category__btn__name">{SideBarLink.name}</div>
         </button>
       </div>
       {isOpen && (

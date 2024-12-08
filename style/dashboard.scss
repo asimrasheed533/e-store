@@ -124,6 +124,16 @@
   object-fit: contain;
   display: none;
 }
+.sidebar__nav__warper__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 1.5em;
+  border-radius: 16px;
+  margin-top: 1em;
+}
 .sidebar__nav__warper {
   display: flex;
   flex-direction: column;
@@ -184,6 +194,9 @@
 .sidebar__category__btn:hover {
   color: var(--golden);
   background-color: var(--blueLight);
+}
+.sidebar__category__btn__name {
+  font-size: 1rem;
 }
 @media (max-width: 768px) {
   .dashboard__sidebar__wrapper {
