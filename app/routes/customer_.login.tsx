@@ -1,3 +1,5 @@
+import Input from "~/components/Input";
+
 export default function CustomerLogin() {
   return (
     <>
@@ -11,16 +13,7 @@ export default function CustomerLogin() {
         </div>
         <div className="login__content">
           <form className="login__content__form" action="" method="post">
-            <div className="login__content__form__field">
-              <label htmlFor="email">Email</label>
-              <input
-                className="login__content__form__input"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-              />
-            </div>
+            <Input label="Enter Email" onChange={() => {}} value="" />
             <div className="login__content__form__field">
               <label htmlFor="password">Password</label>
               <input

@@ -41,3 +41,15 @@ export interface IListingTabs {
   selectedTab: string;
   setSelectedTab: (tab: string) => void;
 }
+
+export interface IInput {
+  label: string;
+  id?: string;
+  value: string;
+  type?: string;
+  error?: string;
+  onChange: (e: any) => void;
+  autoFocus?: boolean;
+  required?: boolean;
+  style?: CSSProperties;
+}
