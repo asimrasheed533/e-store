@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2em;
+  padding: 1.5em;
   gap: 1em;
   background-color: #ffffff;
 }
@@ -115,4 +115,9 @@
 }
 .container__main__content__details__main__input__label__login.focused {
   color: var(--blue);
+}
+@media (max-width: 850px) {
+  .login__container__image {
+    display: none;
+  }
 }

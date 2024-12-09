@@ -1,6 +1,10 @@
+import { useState } from "react";
 import Input from "~/components/Input";
 
 export default function CustomerLogin() {
+  const [isSecure, setIsSecure] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <>
       <div className="login__container">
@@ -14,16 +18,8 @@ export default function CustomerLogin() {
         <div className="login__content">
           <form className="login__content__form" action="" method="post">
             <Input label="Enter Email" onChange={() => {}} value="" />
-            <div className="login__content__form__field">
-              <label htmlFor="password">Password</label>
-              <input
-                className="login__content__form__input"
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter your password"
-              />
-            </div>
+            <Input label="Enter Password" onChange={() => {}} value="" />
+
             <div className="login__content__form__field">
               <input
                 className="login__content__form__button"
