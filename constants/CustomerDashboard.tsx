@@ -6,17 +6,17 @@ export const SideBarLink = [
     icon: <GeneralIcon />,
     children: [
       {
-        name: "Customers",
-        path: "/customer",
+        name: "Products",
+        path: "/products",
       },
 
       {
-        name: "Products",
-        path: "/product",
+        name: "Order",
+        path: "/order",
       },
       {
-        name: "Products",
-        path: "/product2",
+        name: "Users",
+        path: "/users",
       },
     ],
   },

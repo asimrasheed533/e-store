@@ -80,13 +80,14 @@ function SideBarEntry({ sidebarEntry: SideBarLink }: { sidebarEntry: any }) {
   return (
     <>
       <div className="sidebar__nav__warper__header">
-        <button
+        <NavLink
+          to={SideBarLink.path}
           onClick={() => setIsOpen(!isOpen)}
           className={`sidebar__category__btn ${isOpen ? "active" : ""}`}
         >
           <div className="sidebar__category__btn__icon">{SideBarLink.icon}</div>
           <div className="sidebar__category__btn__name">{SideBarLink.name}</div>
-        </button>
+        </NavLink>
       </div>
       {isOpen && (
         <div className="sidebar__nav__warper">

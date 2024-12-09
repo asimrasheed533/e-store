@@ -133,6 +133,10 @@
   margin: 0 1.5em;
   border-radius: 16px;
   margin-top: 1em;
+  // background-color: var(--blueLight);
+}
+.sidebar__nav__warper__header.active {
+  background-color: var(--blueLight);
 }
 .sidebar__nav__warper {
   display: flex;
