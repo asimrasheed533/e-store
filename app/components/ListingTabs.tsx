@@ -1,5 +1,3 @@
-"use client";
-
 import ScrollContainer from "react-indiana-drag-scroll";
 import clsx from "clsx";
 import { IListingTabs } from "interfaces";

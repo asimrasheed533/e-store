@@ -55,12 +55,12 @@
 .listing__page__header__tabs {
   display: flex;
   gap: 0.7em;
-  padding: 1em 0;
+  padding: 0.5em 0;
 }
 .listing__page__header__tabs__tab {
   display: flex;
   align-items: center;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 0.4em 0.5em 0.5em;
   border-radius: 50px;
   box-shadow: var(--shadow);
   border: none;
@@ -68,6 +68,20 @@
   cursor: pointer;
   gap: 0.7em;
   white-space: nowrap;
+}
+.listing__page__header__tabs__tab:hover {
+  transition: all 0.3s;
+  background-color: var(--blueLight);
+}
+.listing__page__header__tabs__tab.active {
+  background: linear-gradient(87deg, #9d6323 4.53%, #ffb73c 143.09%);
+  color: var(--white);
+}
+.listing__page__header__tabs__tab__clip {
+  background-color: var(--white);
+  padding: 0.3em 0.8em;
+  border-radius: 50px;
+  font-size: 0.9em;
 }
 .listing__page__header__actions__button {
   background-color: var(--golden);

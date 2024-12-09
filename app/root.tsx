@@ -1,4 +1,4 @@
-import connectDB from "lib/mongoose";
+// import connectDB from "lib/mongoose";
 import {
   isRouteErrorResponse,
   Links,
@@ -50,11 +50,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export async function loader() {
-  await connectDB();
+// export async function loader() {
+//   await connectDB();
 
-  return null;
-}
+//   return null;
+// }
 
 export default function App() {
   return <Outlet />;
