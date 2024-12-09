@@ -1,9 +1,12 @@
 import ListingTable from "~/components/ListingTable";
 import ListingTabs from "~/components/ListingTabs";
 import headerItems from "../../data/headerItems.json";
-import { productsList as data } from "../../hooks/mocks";
+import { productsList as data } from "../../data/mocks";
 import ListingCheckbox from "~/components/ListingCheckbox";
+import { useState } from "react";
 export default function Products() {
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [page, setPage] = useState(3);
   return (
     <div className="listing__page">
       <div className="listing__page__header">
@@ -32,7 +35,15 @@ export default function Products() {
           </Link> */}
         </div>
       </div>
-      <ListingTable data={[]} headerItems={headerItems.products}>
+      <ListingTable
+        data={[]}
+        headerItems={headerItems.products}
+        selectedRows={selectedRows}
+        setSelectedRows={setSelectedRows}
+        page={page}
+        setPage={setPage}
+        totalPages={10}
+      >
         {data.map((item) => (
           <div key={item.id} className="listing__page__table__content__row">
             <div className="listing__page__table__content__row__entry checkbox">
