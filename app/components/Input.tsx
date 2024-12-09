@@ -4,13 +4,13 @@ import { useState } from "react";
 export default function Input({
   label,
   id,
-  value,
   type = "text",
   error,
-  onChange,
   autoFocus = false,
   required = false,
   style,
+  name,
+  ...rest
 }: IInput) {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -21,9 +21,6 @@ export default function Input({
       <div className="container__input__field__wrapper__login">
         <input
           id={id}
-          name={id}
-          value={value}
-          onChange={onChange}
           type={
             type === "password" && isSecure
               ? "password"
@@ -36,14 +33,15 @@ export default function Input({
           autoFocus={autoFocus}
           className="container__main__input__login__field"
           style={style}
+          {...rest}
+          name={name}
         />
         <label
           htmlFor={id}
           className={
             label &&
             `container__main__content__details__main__input__label__login` +
-              (isFocused ? " focused" : "") +
-              (value !== "" ? " filled" : "")
+              (isFocused ? " focused" : "")
           }
         >
           {label} {required && <span className="required">*</span>}

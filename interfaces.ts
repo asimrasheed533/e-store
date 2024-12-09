@@ -43,12 +43,13 @@ export interface IListingTabs {
 }
 
 export interface IInput {
+  name: string;
   label: string;
   id?: string;
-  value: string;
+  value?: string;
   type?: string;
   error?: string;
-  onChange: (e: any) => void;
+  onChange?: (e: any) => void;
   autoFocus?: boolean;
   required?: boolean;
   style?: CSSProperties;

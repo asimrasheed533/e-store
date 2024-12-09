@@ -127,6 +127,14 @@
 .container__main__content__details__main__input__label__login.focused {
   color: var(--blue);
 }
+.container__main__content__details__main__input__error {
+  color: #ff3333;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
 @media (max-width: 850px) {
   .login__container__image {
     display: none;
