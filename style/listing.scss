@@ -27,6 +27,9 @@
   padding: 0;
   border: 1px solid var(--golden);
 }
+.listing__checkbox.checked {
+  background-color: var(--golden);
+}
 .listing__checkbox svg {
   width: 15px;
   height: 15px;
@@ -40,7 +43,7 @@
   flex-direction: column;
   gap: 1em;
   border-radius: 10px;
-  height: calc(100% - 140px - 2px);
+  height: calc(100% - 80px - 2px);
   position: relative;
 }
 .listing__page__header {
@@ -205,4 +208,58 @@
 }
 .listing__page__table__content__row:hover {
   background-color: var(--lightHover);
+}
+.listing__page__table__footer {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  background-color: var(--blueLight);
+  border-radius: 10px;
+}
+.listing__page__table__footer__stats {
+  display: flex;
+  gap: 0.5em;
+}
+.listing__page__table__footer__stats__entry {
+  font-size: 0.9em;
+  color: var(--white);
+}
+.listing__page__pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.listing__page__pagination__button {
+  background-color: var(--whiteShadow);
+  border-radius: 50%;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  border: none;
+  transition: 300ms ease-in-out;
+}
+.listing__page__pagination__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.listing__page__pagination__button svg {
+  width: 16px;
+  height: 16px;
+  color: var(--blue);
+}
+.listing__page__pagination__button:hover {
+  background-color: var(--golden);
+  color: var(--white);
+  transition: 300ms ease-in-out;
+}
+.listing__page__pagination__button.active {
+  background-color: var(--golden);
+  color: var(--white);
 }
