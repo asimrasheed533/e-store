@@ -13,6 +13,10 @@
   height: 100vh;
   object-fit: cover;
 }
+.go__to__signUp {
+  color: #007893;
+  cursor: pointer;
+}
 .login__content {
   flex: 1;
   width: 50%;
@@ -24,12 +28,19 @@
   gap: 1em;
   background-color: #ffffff;
 }
+.login__content__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 2em;
+  font-weight: 600;
+}
 .login__content__form {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 .login__content__form__input {
   width: 100%;

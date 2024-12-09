@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router";
 import Input from "~/components/Input";
 
-export default function CustomerLogin() {
+export default function CustomerSignUp() {
   const [isSecure, setIsSecure] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,10 +16,17 @@ export default function CustomerLogin() {
           />
         </div>
         <div className="login__content">
-          <div className="login__content__title">Welcome Royal Chef</div>
+          <div className="login__content__title">Create Account</div>
           <form className="login__content__form" action="" method="post">
+            <Input label="Enter Name" onChange={() => {}} value="" />
             <Input label="Enter Email" onChange={() => {}} value="" />
+            <Input label="Enter Phone" onChange={() => {}} value="" />
             <Input label="Enter Password" onChange={() => {}} value="" />
+            <Input
+              label="Enter Confirm Password"
+              onChange={() => {}}
+              value=""
+            />
 
             <div className="login__content__form__field">
               <input
@@ -30,9 +36,6 @@ export default function CustomerLogin() {
               />
             </div>
           </form>
-          <Link to="/customer/signUp" className="go__to__signUp">
-            SignUp
-          </Link>
         </div>
       </div>
     </>
