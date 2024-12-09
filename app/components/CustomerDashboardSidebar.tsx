@@ -1,7 +1,7 @@
 import useSidebar from "hooks/useSidebar";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router";
-import { SideBarLink } from "constants/CustomerDashboard";
+import { SideBarLink } from "constants/SlideBarEntries";
 import { useState } from "react";
 
 export default function CustomerDashboardSidebar() {
