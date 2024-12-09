@@ -1,5 +1,3 @@
-"use Client";
-
 import useSidebar from "hooks/useSidebar";
 import { Link } from "react-router";
 
