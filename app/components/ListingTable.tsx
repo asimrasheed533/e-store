@@ -1,24 +1,20 @@
 import { IListingTable } from "interfaces";
 import ListingActionBar from "./ListingActionBar";
 import ListingHeaderEntry from "./ListingHeaderEntry";
-import Loader from "./Loader";
 import ListingCheckbox from "./ListingCheckbox";
-import NoData from "icons/NoData";
+import ListingPagination from "./ListingPagination";
 
 export default function ListingTable({
   style,
   children,
   actions,
-  selectedRows,
+  selectedRows = [],
   setSelectedRows = () => {},
-  totalPages,
+  totalPages = 0,
   sortData,
   setSortData = () => {},
   headerItems,
-  data,
-  onAdd,
-  isFetchingData,
-  isStale,
+  data = [],
   noCheckbox,
 }: IListingTable) {
   return (
@@ -94,10 +90,10 @@ export default function ListingTable({
           )}
         </div> */}
       </div>
-      {/* {totalPages && (
+      {totalPages > 0 && (
         <div className="listing__page__table__footer">
           <div className="listing__page__table__footer__stats">
-            {selectedRows && (
+            {selectedRows.length > 0 && (
               <div className="listing__page__table__footer__stats__entry">
                 {selectedRows.length} Selected
               </div>
@@ -106,9 +102,13 @@ export default function ListingTable({
               {data?.length} Entries
             </div>
           </div>
-          <ListingPagination totalPages={totalPages} />
+          <ListingPagination
+            currentPage={1}
+            totalPages={totalPages}
+            onPageChange={() => {}}
+          />
         </div>
-      )} */}
+      )}
     </div>
   );
 }
