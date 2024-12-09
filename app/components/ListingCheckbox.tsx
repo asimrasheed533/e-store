@@ -1,5 +1,3 @@
-"use client";
-
 import clsx from "clsx";
 
 interface IListingCheckbox {
@@ -13,7 +11,7 @@ export default function ListingCheckbox({
   checked,
   partiallyChecked,
   onClick,
-  disabled
+  disabled,
 }: IListingCheckbox) {
   return (
     <button
