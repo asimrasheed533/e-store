@@ -136,7 +136,9 @@ export default function Header() {
                 </button>
               </>
             )} */}
-            <button className="nav__register__button">Login</button>
+            <NavLink to="customer/login" className="nav__register__button">
+              Login
+            </NavLink>
           </div>
         </div>
       </ClickAwayListener>
