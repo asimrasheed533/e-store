@@ -3,7 +3,7 @@ import ListingTabs from "~/components/ListingTabs";
 import headerItems from "../../data/headerItems.json";
 import { productsList as data } from "../../hooks/mocks";
 import ListingCheckbox from "~/components/ListingCheckbox";
-export default function CustomerProducts() {
+export default function Products() {
   return (
     <div className="listing__page">
       <div className="listing__page__header">

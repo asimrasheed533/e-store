@@ -7,7 +7,7 @@ export const SideBarLink = [
     children: [
       {
         name: "Products",
-        path: "/products",
+        path: "/customer/products",
       },
 
       {
