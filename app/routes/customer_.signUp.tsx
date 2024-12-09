@@ -1,6 +1,4 @@
 import { ActionFunctionArgs, redirect, useFetcher } from "react-router";
-// import SignUpModel from "models/signUp";
-import { useState } from "react";
 import Input from "~/components/Input";
 import { SignUp } from "models/signUp";
 
