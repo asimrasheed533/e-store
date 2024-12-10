@@ -1,4 +1,3 @@
-// import connectDB from "lib/mongoose";
 import {
   isRouteErrorResponse,
   Links,
@@ -31,6 +30,7 @@ export const links: Route.LinksFunction = () => [
 ];
 
 import type { Route } from "./+types/root";
+import connectDB from "lib/mongoose";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -50,11 +50,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-// export async function loader() {
-//   await connectDB();
+export async function loader() {
+  await connectDB();
 
-//   return null;
-// }
+  return null;
+}
 
 export default function App() {
   return <Outlet />;

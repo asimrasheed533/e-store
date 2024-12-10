@@ -30,6 +30,7 @@ export default function Input({
           }
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          placeholder=" "
           autoFocus={autoFocus}
           className="container__main__input__login__field"
           style={style}
@@ -38,11 +39,9 @@ export default function Input({
         />
         <label
           htmlFor={id}
-          className={
-            label &&
-            `container__main__content__details__main__input__label__login` +
-              (isFocused ? " focused" : "")
-          }
+          className={`container__main__content__details__main__input__label__login ${
+            isFocused ? "focused" : ""
+          }`}
         >
           {label} {required && <span className="required">*</span>}
         </label>

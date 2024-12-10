@@ -1,6 +1,7 @@
 import { ActionFunctionArgs, redirect, useFetcher } from "react-router";
 import Input from "~/components/Input";
 import { SignUp } from "models/signUp";
+import loginImg from "../../assets/loginImg.png";
 
 export async function action({ request }: ActionFunctionArgs) {
   const body = await request.formData();
@@ -26,6 +27,30 @@ export async function action({ request }: ActionFunctionArgs) {
     };
   }
 
+  if (password !== confirmPassword) {
+    return {
+      status: 400,
+      errors: {
+        confirmPassword: "Passwords do not match",
+      },
+    };
+  }
+
+  // Check if email, phone, or name already exists
+  const existingUser = await SignUp.findOne({
+    $or: [{ email }, { phone }, { name }],
+  });
+  if (existingUser) {
+    return {
+      status: 400,
+      errors: {
+        email: existingUser.email === email ? "Email already exists" : null,
+        phone: existingUser.phone === phone ? "Phone already exists" : null,
+        name: existingUser.name === name ? "Name already exists" : null,
+      },
+    };
+  }
+
   await SignUp.create({
     name,
     email,
@@ -44,7 +69,7 @@ export default function CustomerSignUp() {
         <div className="login__container__image">
           <img
             className="login__container__image__img"
-            src="/loginImg.jpg"
+            src={loginImg}
             alt="fast food"
           />
         </div>

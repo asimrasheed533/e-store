@@ -67,7 +67,7 @@ export default function CustomerDashboardSidebar() {
         </div>
         <div className="container__sidebar__content">
           {SideBarLink.map((index) => (
-            <SideBarEntry sidebarEntry={index} />
+            <SideBarEntry sidebarEntry={index} key={index.name} />
           ))}
         </div>
       </motion.div>
