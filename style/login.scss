@@ -127,6 +127,15 @@
   color: var(--lightBlue);
   z-index: 1;
 }
+.container__main__content__details__main__input__login__toggle {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .container__main__content__details__main__input__error {
   color: #ff3333;
   position: absolute;
