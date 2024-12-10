@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { ActionFunctionArgs, redirect, useFetcher } from "react-router";
 import Input from "~/components/Input";
 import { SignUp } from "models/signUp";
@@ -36,11 +37,14 @@ export async function action({ request }: ActionFunctionArgs) {
     };
   }
 
-  // Check if email, phone, or name already exists
   const existingUser = await SignUp.findOne({
     $or: [{ email }, { phone }, { name }],
   });
   if (existingUser) {
+    if (existingUser.email === email) toast.error("Email already exists");
+    if (existingUser.phone === phone) toast.error("Phone already exists");
+    if (existingUser.name === name) toast.error("Name already exists");
+
     return {
       status: 400,
       errors: {
@@ -57,7 +61,7 @@ export async function action({ request }: ActionFunctionArgs) {
     phone,
     password,
   });
-
+  toast.success("Account created successfully! Redirecting to login...");
   return redirect("/customer/login");
 }
 
@@ -92,11 +96,13 @@ export default function CustomerSignUp() {
               error={fetcher.data?.errors?.phone}
             />
             <Input
+              type="password"
               label="Enter Password"
               name="password"
               error={fetcher.data?.errors?.password}
             />
             <Input
+              type="password"
               label="Enter Confirm Password"
               name="confirmPassword"
               error={fetcher.data?.errors?.confirmPassword}
