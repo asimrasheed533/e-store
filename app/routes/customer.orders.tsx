@@ -4,7 +4,7 @@ import headerItems from "../../data/headerItems.json";
 import { productsList as data } from "../../data/mocks";
 import ListingCheckbox from "~/components/ListingCheckbox";
 import { useState } from "react";
-export default function Products() {
+export default function Orders() {
   const [selectedRows, setSelectedRows] = useState([]);
   const [page, setPage] = useState(3);
   return (
