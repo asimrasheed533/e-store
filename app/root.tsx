@@ -11,7 +11,6 @@ const styles = import.meta.glob("/style/**/*.scss", {
   eager: true,
   query: "url",
 });
-
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -31,6 +30,8 @@ export const links: Route.LinksFunction = () => [
 
 import type { Route } from "./+types/root";
 import connectDB from "lib/mongoose";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -44,6 +45,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <ScrollRestoration />
+        <ToastContainer
+          toastStyle={{ backgroundColor: "var(--whiteShadow)" }}
+          stacked
+          position="top-right"
+          style={{ zIndex: 99999 }}
+        />
         <Scripts />
       </body>
     </html>
