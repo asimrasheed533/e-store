@@ -130,7 +130,6 @@
   gap: 1.5em;
   align-items: flex-start;
   justify-content: center;
-  margin: 0 1.5em;
   border-radius: 16px;
   margin-top: 1em;
   // background-color: var(--blueLight);
@@ -141,7 +140,7 @@
 .container__sidebar__content {
   margin-top: 2em;
   height: calc(100% - 45px - 2em);
-  padding: 0em 1.5em;
+  padding: 0em 1em;
   width: 100%;
   overflow-y: auto;
 }
