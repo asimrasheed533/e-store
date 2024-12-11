@@ -1,0 +1,31 @@
+.add__product__container {
+  display: flex;
+  gap: 1em;
+  width: 100%;
+}
+.products__image__warper {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color: var(--lightHover);
+  border-radius: 10px;
+}
+.products__entries__warper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1.5em;
+  background-color: var(--lightHover);
+  border-radius: 10px;
+  padding: 1em;
+}
+.input__entry__add__row {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+}
