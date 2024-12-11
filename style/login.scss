@@ -26,7 +26,7 @@
   justify-content: center;
   padding: 1.5em;
   gap: 1em;
-  background-color: #ffffff;
+  background-color: var(--blueLight);
 }
 .login__content__title {
   display: flex;
@@ -34,6 +34,7 @@
   gap: 0.5em;
   font-size: 2em;
   font-weight: 600;
+  color: var(--white);
 }
 .login__content__form {
   display: flex;
@@ -71,7 +72,6 @@
   width: 100%;
   display: flex;
   position: relative;
-  margin-top: 1em;
   border-radius: 9px;
   color: var(--blue);
   flex-direction: column;
@@ -83,18 +83,18 @@
 }
 .container__main__input__login__field {
   padding: 1.2em 1.5em;
-  border-color: var(--lightBlue);
   border-radius: 50px;
+  color: var(--white);
   width: 100%;
   padding: 1.2em 1.5em;
   border-radius: 50px;
-  border: 1px solid var(--grey);
+  border: 1px solid var(--whiteShadow);
   background-color: transparent;
   outline: none;
   height: 100%;
 }
 .container__main__input__login__field:focus {
-  border-color: var(--blue);
+  border-color: var(--white);
 }
 .container__main__content__details__main__input__label__login {
   position: absolute;
@@ -105,8 +105,8 @@
   pointer-events: none;
   font-size: 0.8em;
   color: var(--blue);
-  background-color: var(--white);
-  color: var(--lightBlue);
+  background-color: var(--blueLight);
+  color: var(--white);
   width: fit-content;
   font-weight: 400;
   transition: 300ms ease-in-out;
@@ -124,7 +124,7 @@
   left: 16px;
   transform: translateY(-100%);
   font-size: 12px;
-  color: var(--lightBlue);
+  color: var(--white);
   z-index: 1;
 }
 .container__main__content__details__main__input__login__toggle {
