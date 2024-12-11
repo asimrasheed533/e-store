@@ -30,6 +30,11 @@
 .listing__checkbox.checked {
   background-color: var(--golden);
 }
+.listing__page__table__content__row__entry.checkbox {
+  width: 50px;
+  min-width: 50px;
+  justify-content: center;
+}
 .listing__checkbox svg {
   width: 15px;
   height: 15px;

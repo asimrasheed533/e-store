@@ -36,7 +36,7 @@ export default function AdminDashboardSidebar() {
         className="dashboard__sidebar"
       >
         <div className="dashboard__sidebar__header">
-          <Link to="/customer" className="dashboard__sidebar__header__logo">
+          <Link to="/admin" className="dashboard__sidebar__header__logo">
             <img
               className="dashboard__sidebar__header__logo__img"
               loading="lazy"

@@ -7,7 +7,7 @@ export default function AdminDashboardHeader() {
     <div className="dashboard__main__header">
       {isCollapsed && (
         <div className="dashboard__sidebar__mobile">
-          <Link to="/customer" className="dashboard__sidebar__mobile__logo">
+          <Link to="/admin" className="dashboard__sidebar__mobile__logo">
             <img
               loading="lazy"
               src="https://res.cloudinary.com/dsxbqyjwo/image/upload/v1733401133/menuLogo_gftkyz.png"

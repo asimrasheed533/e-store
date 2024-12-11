@@ -5,6 +5,7 @@ import { productsList as data } from "../../data/mocks";
 import ListingCheckbox from "~/components/ListingCheckbox";
 import { useState } from "react";
 import { Link } from "react-router";
+
 export default function Products() {
   const [selectedRows, setSelectedRows] = useState([]);
   const [page, setPage] = useState(3);
@@ -14,7 +15,7 @@ export default function Products() {
         <ListingTabs
           selectedTab="Products"
           setSelectedTab={() => {}}
-          tabs={[{ name: "Products", number: 0 }]}
+          tabs={[{ name: "Products", number: 120 }]}
         />
         <div className="listing__page__header__actions">
           {/* <SearchInput value={search} onChange={setSearch} /> */}
@@ -49,7 +50,11 @@ export default function Products() {
         totalPages={10}
       >
         {data.map((item) => (
-          <div key={item.id} className="listing__page__table__content__row">
+          <Link
+            className="listing__page__table__content__row"
+            to={`/admin/products/${item.id}`}
+            key={item.id}
+          >
             <div className="listing__page__table__content__row__entry checkbox">
               <ListingCheckbox checked={false} onClick={() => {}} />
             </div>
@@ -66,7 +71,7 @@ export default function Products() {
             <div className="listing__page__table__content__row__entry">
               {item.price}
             </div>
-          </div>
+          </Link>
         ))}
       </ListingTable>
     </div>

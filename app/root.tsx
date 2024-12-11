@@ -7,6 +7,20 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+export function meta() {
+  return [
+    { title: "Royal Cafe" },
+    {
+      property: "og:title",
+      content: "Very cool app",
+    },
+    {
+      name: "description",
+      content: "This app is the best",
+    },
+  ];
+}
+
 const styles = import.meta.glob("/style/**/*.scss", {
   eager: true,
   query: "url",
