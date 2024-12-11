@@ -138,13 +138,19 @@
 .sidebar__nav__warper__header.active {
   background-color: var(--blueLight);
 }
+.container__sidebar__content {
+  margin-top: 2em;
+  height: calc(100% - 45px - 2em);
+  padding: 0em 1.5em;
+  width: 100%;
+  overflow-y: auto;
+}
 .sidebar__nav__warper {
   display: flex;
   flex-direction: column;
   gap: 1em;
   align-items: flex-start;
   justify-content: center;
-  margin: 0 1.5em;
   background-color: #1d293557;
   border-radius: 16px;
 }

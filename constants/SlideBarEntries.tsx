@@ -25,9 +25,120 @@ export const AdminSideBarLink = [
     name: "Admin",
     path: "",
     icon: <GeneralIcon />,
+    children: [
+      {
+        name: "Orders",
+        path: "/admin/orders",
+      },
+      {
+        name: "Users",
+        path: "/admin/users",
+      },
+    ],
   },
   {
-    name: "Orders",
+    name: "Admin",
     path: "",
+    icon: <GeneralIcon />,
+    children: [
+      {
+        name: "Orders",
+        path: "/admin/orders",
+      },
+      {
+        name: "Users",
+        path: "/admin/users",
+      },
+    ],
+  },
+  {
+    name: "Admin",
+    path: "",
+    icon: <GeneralIcon />,
+    children: [
+      {
+        name: "Orders",
+        path: "/admin/orders",
+      },
+      {
+        name: "Users",
+        path: "/admin/users",
+      },
+    ],
+  },
+  {
+    name: "Admin",
+    path: "",
+    icon: <GeneralIcon />,
+    children: [
+      {
+        name: "Orders",
+        path: "/admin/orders",
+      },
+      {
+        name: "Users",
+        path: "/admin/users",
+      },
+    ],
+  },
+  {
+    name: "Admin",
+    path: "",
+    icon: <GeneralIcon />,
+    children: [
+      {
+        name: "Orders",
+        path: "/admin/orders",
+      },
+      {
+        name: "Users",
+        path: "/admin/users",
+      },
+    ],
+  },
+  {
+    name: "Admin",
+    path: "",
+    icon: <GeneralIcon />,
+    children: [
+      {
+        name: "Orders",
+        path: "/admin/orders",
+      },
+      {
+        name: "Users",
+        path: "/admin/users",
+      },
+    ],
+  },
+  {
+    name: "Admin",
+    path: "",
+    icon: <GeneralIcon />,
+    children: [
+      {
+        name: "Orders",
+        path: "/admin/orders",
+      },
+      {
+        name: "Users",
+        path: "/admin/users",
+      },
+    ],
+  },
+  {
+    name: "Admin",
+    path: "",
+    icon: <GeneralIcon />,
+    children: [
+      {
+        name: "Orders",
+        path: "/admin/orders",
+      },
+      {
+        name: "Users",
+        path: "/admin/users",
+      },
+    ],
   },
 ];

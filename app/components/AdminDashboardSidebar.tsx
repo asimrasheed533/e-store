@@ -1,8 +1,8 @@
 import useSidebar from "hooks/useSidebar";
 import { motion } from "framer-motion";
 import { Link, NavLink } from "react-router";
-import { AdminSideBarLink } from "constants/SlideBarEntries";
 import { useState } from "react";
+import { AdminSideBarLink } from "constants/SlideBarEntries";
 
 export default function AdminDashboardSidebar() {
   const [isCollapsed, setIsCollapsed] = useSidebar();
@@ -75,23 +75,31 @@ export default function AdminDashboardSidebar() {
   );
 }
 
-function SideBarEntry({ sidebarEntry: SideBarLink }: { sidebarEntry: any }) {
+function SideBarEntry({
+  sidebarEntry: AdminSideBarLink,
+}: {
+  sidebarEntry: any;
+}) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div className="sidebar__nav__warper__header">
         <NavLink
-          to={SideBarLink.path}
+          to={AdminSideBarLink.path}
           onClick={() => setIsOpen(!isOpen)}
           className={`sidebar__category__btn ${isOpen ? "active" : ""}`}
         >
-          <div className="sidebar__category__btn__icon">{SideBarLink.icon}</div>
-          <div className="sidebar__category__btn__name">{SideBarLink.name}</div>
+          <div className="sidebar__category__btn__icon">
+            {AdminSideBarLink.icon}
+          </div>
+          <div className="sidebar__category__btn__name">
+            {AdminSideBarLink.name}
+          </div>
         </NavLink>
       </div>
       {isOpen && (
         <div className="sidebar__nav__warper">
-          {SideBarLink.children.map((entry: any) => (
+          {AdminSideBarLink.children.map((entry: any) => (
             <NavLink
               key={entry.path}
               className={({ isActive }) =>
