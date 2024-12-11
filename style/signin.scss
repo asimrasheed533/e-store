@@ -108,7 +108,58 @@
   font-weight: 600;
   transition: 300ms ease-in-out;
 }
-
+.create__user__section__image__upload {
+  height: 150px;
+  width: 150px;
+  border-radius: 70px;
+  border: 1px dotted var(--lightBlue);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.create__user__section__image__upload__inner {
+  background-color: var(--grey);
+  height: 140px;
+  width: 140px;
+  border-radius: 70px;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--blue);
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  gap: 0.5em;
+}
+.create__user__section__image__upload__inner__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+}
+.create__user__section__image__upload__inner__preview {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+.create__user__section__image__label {
+  width: 50%;
+  text-align: center;
+  font-size: 0.8em;
+}
 .error__input {
   color: red;
   font-size: 12px;
@@ -447,7 +498,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--blueLight) inset !important;
+  -webkit-text-fill-color: white !important;
+  color: white !important;
 }
 
 .google__login__wrapper {
