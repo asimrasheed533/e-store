@@ -1,13 +1,35 @@
-import { ActionFunctionArgs, Link, redirect, useFetcher } from "react-router";
+import {
+  ActionFunctionArgs,
+  createCookie,
+  Link,
+  redirect,
+  useFetcher,
+} from "react-router";
 import Input from "~/components/Input";
 import loginImg from "../../assets/loginImg.png";
+import { Route } from "./+types/customer_.login";
+import { tokenCookie } from "cookies";
+import authCheck from "utils/authCheck";
 
-export async function action({ request }: ActionFunctionArgs) {
+export async function loader({ request }: Route.LoaderArgs) {
+  const token = await authCheck(request);
+
+  if (token) {
+    return redirect("/customer");
+  }
+}
+
+export async function action({ request }: Route.ActionArgs) {
   const body = await request.formData();
   const email = body.get("email");
   const password = body.get("password");
   console.log(email, password);
-  return redirect("/customer");
+
+  return redirect("/customer", {
+    headers: {
+      "Set-Cookie": await tokenCookie.serialize("alibaba"),
+    },
+  });
 }
 
 export default function CustomerLogin() {
