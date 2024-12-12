@@ -1,5 +1,6 @@
 import Input from "~/components/Input";
 import PictureInput from "~/components/PictureInput";
+import Select from "~/components/Select";
 
 export default function ProductAdd() {
   return (
@@ -14,9 +15,10 @@ export default function ProductAdd() {
           <Input label="Product Name" name="name" />
         </div>
         <div className="input__entry__add__row">
-          <Input label="Product Name" name="name" />
-          <Input label="Product Name" name="name" />
-          <Input label="Product Name" name="name" />
+          <Select
+            options={[{ label: "Option 1", value: "option1" }]}
+            label="Product Category"
+          />
         </div>
       </div>
     </div>
