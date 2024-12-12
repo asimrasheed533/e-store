@@ -54,3 +54,16 @@ export interface IInput {
   required?: boolean;
   style?: CSSProperties;
 }
+export interface IOption {
+  value: any;
+  label: string;
+}
+export interface ISelect {
+  placeholder?: string;
+  options: IOption[];
+  value?: IOption | IOption[] | null;
+  onChange?: (newValue: any) => void;
+  label: string;
+  isMulti?: boolean;
+  disabled?: boolean;
+}
