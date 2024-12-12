@@ -49,6 +49,7 @@
 .dashboard__main__header__title__text {
   color: var(--golden);
   font-weight: 300;
+  text-transform: capitalize;
 }
 .dashboard__main__header__title {
   display: flex;

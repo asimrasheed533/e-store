@@ -6,7 +6,7 @@ import ListingCheckbox from "~/components/ListingCheckbox";
 import { useState } from "react";
 import { Link } from "react-router";
 
-export default function Products() {
+export default function Product() {
   const [selectedRows, setSelectedRows] = useState([]);
   const [page, setPage] = useState(3);
   return (
@@ -21,7 +21,7 @@ export default function Products() {
           {/* <SearchInput value={search} onChange={setSearch} /> */}
 
           <Link
-            to="/admin/productsAdd"
+            to="/admin/ProductAdd"
             className="listing__page__header__actions__button"
           >
             <svg

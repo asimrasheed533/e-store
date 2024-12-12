@@ -1,4 +1,13 @@
 import GeneralIcon from "icons/GeneralIcon";
+import { useLocation } from "react-router";
+
+export function useBackLocation() {
+  const location = useLocation();
+  return location.pathname
+    .toLowerCase()
+    .replace("/" + location.pathname.toLowerCase().split("/")[3], "");
+}
+
 export const SideBarLink = [
   {
     name: "Dashboard",

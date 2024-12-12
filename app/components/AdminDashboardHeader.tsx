@@ -1,7 +1,9 @@
 import useSidebar from "hooks/useSidebar";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 
 export default function AdminDashboardHeader() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isCollapsed, setIsCollapsed] = useSidebar();
   return (
     <div className="dashboard__main__header">
@@ -37,7 +39,15 @@ export default function AdminDashboardHeader() {
         </div>
       )}
       <div className="dashboard__main__header__title">
-        <button type="button" className="dashboard__main__header__title__back">
+        <button
+          onClick={() => {
+            if (location.pathname.toLowerCase() !== "/admin") {
+              navigate(-1);
+            }
+          }}
+          type="button"
+          className="dashboard__main__header__title__back"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -53,7 +63,19 @@ export default function AdminDashboardHeader() {
             <polyline points="15 18 9 12 15 6" />
           </svg>
         </button>
-        <div className="dashboard__main__header__title__text">Admin</div>
+        <div className="dashboard__main__header__title__text">
+          {location.pathname === "/admin"
+            ? location.pathname
+
+                .replace("/admin/", "")
+                .replace("/", "")
+                .replace("-", " ")
+            : location.pathname
+
+                .replace("/admin/", "")
+                .replace("/", " > ")
+                .replace("-", " ")}
+        </div>
       </div>
     </div>
   );
