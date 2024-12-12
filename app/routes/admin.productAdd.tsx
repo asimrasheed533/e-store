@@ -8,7 +8,6 @@ export default function ProductAdd() {
       {/* <div className="products__image__warper">
       </div> */}
       <div className="products__entries__warper">
-        <PictureInput label="Product Image" onChange={() => {}} />
         <div className="input__entry__add__row">
           <Input label="Product Name" name="name" />
           <Input label="Product Name" name="name" />
@@ -16,8 +15,12 @@ export default function ProductAdd() {
         </div>
         <div className="input__entry__add__row">
           <Select
-            options={[{ label: "Option 1", value: "option1" }]}
             label="Product Category"
+            options={[
+              { value: "category1", label: "Category 1" },
+              { value: "category2", label: "Category 2" },
+              { value: "category3", label: "Category 3" },
+            ]}
           />
         </div>
       </div>
