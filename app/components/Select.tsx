@@ -1,7 +1,6 @@
-import ReactSelect from "react-select";
 import { useState } from "react";
 import { ISelect } from "interfaces";
-
+import ReactSelect from "react-select";
 const Select = ({
   placeholder,
   options,
@@ -20,7 +19,7 @@ const Select = ({
     control: (base: any, state: any) => ({
       ...base,
       fontSize: "12px",
-      minHeight: "55px",
+      minHeight: "45px",
       borderRadius: "60px",
       borderColor: state.isFocused && !value ? "#DBE0E4" : "var(--grey)",
       backgroundColor: "var(--whiteShadow)",
@@ -74,8 +73,6 @@ const Select = ({
         isMulti={isMulti}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        styles={customStyles}
-        theme={customTheme}
         isDisabled={disabled}
       />
     </div>
